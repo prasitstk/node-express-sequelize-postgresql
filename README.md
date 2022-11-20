@@ -38,12 +38,35 @@ Integration (run back-end & front-end on same server/port)
 
 > [Integrate Vue with Node.js Restful Services](https://bezkoder.com/serve-vue-app-express/)
 
+---
+
+&nbsp;
+
 ## Project setup
 ```
 npm install
+createdb tutorials-db
 ```
 
+Also, rename `.env.example` to `.env` and change its environment variable values. If not, it will use hard-coded default values:
+```
+# Backend port, changed if you need.
+PORT=8080
+
+# CORS origin URL, changed if you need.
+CORS_ORIGIN=http://localhost:8081
+
+# Database connection configuration
+DB_HOST=<your DB_HOST; otherwise, localhost>
+DB_USER=<your DB_USER; otherwise, postgres>
+DB_USER_PASSWORD=<your DB_USER_PASSWORD; otherwise, empty>
+DB_NAME=<your DB_NAME; otherwise, testdb>
+```
+
+---
+&nbsp;
 ### Run
 ```
 node server.js
 ```
+---
