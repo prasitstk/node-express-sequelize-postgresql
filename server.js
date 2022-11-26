@@ -31,6 +31,9 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to bezkoder application." });
 });
 
+// Health check
+app.get('/health', (req, res) => res.send('Health OK'))
+
 require("./app/routes/turorial.routes")(app);
 
 // set port, listen for requests

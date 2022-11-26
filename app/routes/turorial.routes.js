@@ -24,8 +24,5 @@ module.exports = app => {
   // Delete all Tutorials
   router.delete("/", tutorials.deleteAll);
   
-  // Health check
-  router.get('/health', (req, res) => res.send('OK'))
-
   app.use("/api/tutorials", router);
 };
